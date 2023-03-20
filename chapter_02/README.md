@@ -74,3 +74,16 @@ Third, automated tests can be useful to help you understand how the different co
 ### **Using JUnit:**
 
 Hopefully you are now convinced of the value of writing automated tests. In this section, you will learn how to create your first automated test using a popular Java framework called JUnit. You will see that writing a test takes time. In addition, you will have to think about the longer-term maintenance of the test you write since it is regular code, after all. However, the benefits listed in the previous section far outweigh the downsides of having to write tests. Specifically, you will write unit tests, which verify a small isolated unit of behavior for correctness, such as a method or a small class. Throughout the book you will learn about guidelines for writing good tests. Here you will first get an initial overview for writing a simple test for the BankTransactionCSVParser.
+
+#### - ASSERTIONS:
+
+| Assertion state                               | Purpose                                                                                  |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Assert.fail(message)                          | Let the method fail. This is useful as a placeholder before you implement the test code. |
+| Assert.assertEquals​(expected, actual)        | Test that two values are the same.                                                       |
+| Assert.assertEquals​(expected, actual, delta) | Assert that two floats or doubles are equal to within a delta.                           |
+| Assert.assertNotNull(object)                  | Assert that an object is not null.                                                       |
+
+### **CODE COVERAGE:**
+
+Code coverage refers to how much of the source code of your software (i.e., how many lines or blocks) is tested by a set of tests. It is generally a good idea to aim for high coverage because it reduces the chance of unexpected bugs. There isn’t a specific percentage that is considered sufficient, but we recommend aiming for 70%–90%.
