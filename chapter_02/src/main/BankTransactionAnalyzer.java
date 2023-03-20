@@ -8,11 +8,8 @@ import java.util.List;
 
 public class BankTransactionAnalyzer {
     private static final String RESOURCES = "src/main/resources/";
-    private static final BankStatementCSVParser bankStatementParser = new BankStatementCSVParser();
 
-    public static void main(String[] args) throws IOException {
-        // Filename from command line args
-        final String fileName = args[0];
+    public void analyze(final String fileName, final BankStatementParser bankStatementParser) throws IOException {
         // Path to the csv file
         final Path path = Paths.get(RESOURCES + fileName);
         // Getting a list of lines in the file

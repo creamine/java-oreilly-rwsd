@@ -45,3 +45,8 @@ Learning the foundations about good software development before learning more ad
 | Logical (medium cohesion)       | Provides some form of high-level categorization | Encourages violation of SRP                            |
 | Utility (low cohesion)          | Simple to put in place                          | Harder to reason about the responsibility of the class |
 | Temporal (low cohesion)         | N/A                                             | Harder to understand and use individual operations     |
+
+## Coupling
+
+Another important characteristic about the code you write is coupling. Where cohesion is about how related things are in a class, package, or method, coupling is about how dependent you are on other classes. Another way to think about coupling is how much knowledge (i.e., specific implementation) you rely on about certain classes.
+Coupling is concerned with how dependent things are. For example, so far the class BankStatementAnalyzer relies on the class BankStatementCSVParser. What if you need to change the parser so it supports statements encoded as JSON entries? What about XML entries? This would be an annoying refactoring! But do not worry, you can decouple different components by using an interface, which is the tool of choice for providing flexibility for changing requirements.
