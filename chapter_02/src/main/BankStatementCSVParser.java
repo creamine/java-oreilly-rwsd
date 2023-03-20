@@ -24,7 +24,7 @@ public class BankStatementCSVParser {
         return new BankTransaction(date, amount, description);
     }
 
-    public List<BankTransaction> parseLinesFromCSV(final List<String> lines) {
+    public List<BankTransaction> parseLinesFrom(final List<String> lines) {
         final List<BankTransaction> bankTransactions = new ArrayList<>();
         for (final String line : lines) {
             bankTransactions.add(parseFromCSV(line));
