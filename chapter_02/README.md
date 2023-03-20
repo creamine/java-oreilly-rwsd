@@ -87,3 +87,23 @@ Hopefully you are now convinced of the value of writing automated tests. In this
 ### **CODE COVERAGE:**
 
 Code coverage refers to how much of the source code of your software (i.e., how many lines or blocks) is tested by a set of tests. It is generally a good idea to aim for high coverage because it reduces the chance of unexpected bugs. There isn’t a specific percentage that is considered sufficient, but we recommend aiming for 70%–90%.
+
+Popular code coverage tools in Java include JaCoCo, Emma, and Cobertura. In practice, you will see people talking about line coverage, which tells you how many statements the code covered. This technique gives a false sense of having good coverage because conditionals (if, while, for) will count as one statement. However, conditionals have multiple possible paths. You should therefore favor branch coverage, which checks the true and false branch for each conditional.
+
+## **Takeaways**
+
+- God Classes and code duplication lead to code that is hard to reason about and maintain.
+
+- The Single Responsibility Principle helps you write code that is easier to manage and maintain.
+
+- Cohesion is concerned with how how strongly related the responsibilities of a class or method are.
+
+- Coupling is concerned with how dependent a class is on other parts of your code.
+
+- High cohesion and low coupling are characteristics of maintainable code.
+
+- A suite of automated tests increases confidence that your software is correct, makes it more robust for changes, and helps program comprehension.
+
+- JUnit is a Java testing framework that lets you specify unit tests that verify the behavior of your methods and classes.
+
+- Given-When-Then is a pattern for setting up a test into three parts to help understand the tests you implement.

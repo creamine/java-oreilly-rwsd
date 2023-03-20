@@ -19,7 +19,6 @@ public class BankStatementCSVParserTest {
         Assert.assertEquals(expected.getDate(), result.getDate());
         Assert.assertEquals(expected.getAmount(), result.getAmount(), tolerance);
         Assert.assertEquals(expected.getDescription(), result.getDescription());
-
     }
 
     @Test
