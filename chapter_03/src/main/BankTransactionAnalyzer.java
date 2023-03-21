@@ -23,8 +23,6 @@ public class BankTransactionAnalyzer {
     }
 
     public static void collectSummary(final BankStatementProcessor bankStatementProcessor) {
-        final List<BankTransaction> transactions = bankStatementProcessor
-                .findTransactions(new BankTransactionIsInFebruaryAndExpensive());
         System.out.println("The total for all transactions is: " + bankStatementProcessor.calculateTotalAmount());
         System.out.println("The total for expensive transactions in February is: "
                 + bankStatementProcessor.calculateTotalInMonth(Month.FEBRUARY));
