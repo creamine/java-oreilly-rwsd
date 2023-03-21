@@ -2,6 +2,7 @@ package main;
 
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 
 public class BankStatementProcessor {
@@ -9,6 +10,18 @@ public class BankStatementProcessor {
 
     public BankStatementProcessor(final List<BankTransaction> bankTransactions) {
         this.bankTransactions = bankTransactions;
+    }
+
+    public SummaryStatistics summarizeTransactions() {
+
+        final DoubleSummaryStatistics doubleSummaryStatistics = bankTransactions.stream()
+                .mapToDouble(BankTransaction::getAmount)
+                .summaryStatistics();
+
+        return new SummaryStatistics(doubleSummaryStatistics.getSum(),
+                doubleSummaryStatistics.getMax(),
+                doubleSummaryStatistics.getMin(),
+                doubleSummaryStatistics.getAverage());
     }
 
     public double summarizeTransactions(final BankTransactionsSummarizer bankTransactionsSummarizer) {

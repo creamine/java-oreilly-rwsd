@@ -25,6 +25,7 @@ public class BankStatementCSVParser implements BankStatementParser {
     }
 
     public List<BankTransaction> parseLinesFrom(final List<String> lines) {
+        //return lines.stream().map(this::parseFrom).collect(toList());
         final List<BankTransaction> bankTransactions = new ArrayList<>();
         for (final String line : lines) {
             bankTransactions.add(parseFrom(line));

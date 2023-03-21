@@ -4,8 +4,12 @@ import java.io.IOException;
 
 public class App {
     public static void main(String[] args) throws IOException {
-        final BankTransactionAnalyzer bankTransactionAnalyzer = new BankTransactionAnalyzer();
+        final BankStatementAnalyzer bankStatementAnalyzer = new BankStatementAnalyzer();
+
         final BankStatementParser bankStatementParser = new BankStatementCSVParser();
-        bankTransactionAnalyzer.analyze(args[0], bankStatementParser);
+
+        final Exporter exporter = new HtmlExporter();
+
+        bankStatementAnalyzer.analyze("BankStatement.csv", bankStatementParser, exporter);
     }
 }
