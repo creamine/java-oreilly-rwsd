@@ -14,3 +14,31 @@ Finally, we will learn how to systematically build a Java project using an estab
 ### **Open/Closed Principle:**
 
 Let’s start simple. You will implement a method that can find all the transactions over a certain amount. The first question is where should you declare this method? You could create a separate BankTransactionFinder class that will contain a simple findTransactions() method. However, you also declared a class BankTransactionProcessor in the previous chapter. So what should you do? In this case, there aren’t a lot of benefits in declaring a new class every time you need to add one single method. This actually adds complexity to your whole project, as it introduces a pollution of names that makes it harder to understand the relationships between these different behaviors. Declaring the method inside BankTransactionProcessor helps with discoverability as you immediately know that this is the class that groups all methods that do some form of processing. Now that you’ve decided where to declare it, you can implement it.
+
+## **Takeaways**
+
+- The Open/Closed Principle promotes the idea of being able to change the behavior of a method or class without having to modify the code.
+
+- The Open/Closed Principle reduces fragility of code by not changing existing code, promotes reusability of existing code, and promotes decoupling, which leads to better code maintenance.
+
+- God interfaces with many specific methods introduce complexity and coupling.
+
+- An interface that is too granular with single methods can introduce the opposite of cohesion.
+
+- You should not be worried about adding descriptive method names to help readability and comprehension of your API .
+
+- Returning void as a result of an operation makes it difficult to test its behavior.
+
+- Exceptions in Java contribute to documentation, type safety, and separation of concerns.
+
+- Use checked exceptions sparingly rather than the default as they can cause significant clutter.
+
+- Overly specific exceptions can make software development unproductive.
+
+- The Notification Pattern introduces a domain class to collect errors.
+
+- Do not ignore an exception or catch the generic Exception as you will lose the benefits of diagnosing the root of the problem.
+
+- A build tool automates the repetitive tasks in the software development life cycle including building, testing, and deploying your application.
+
+- Maven and Gradle are two popular build tools used in the Java community.
