@@ -24,3 +24,11 @@ Informally you can think of this as meaning that child classes should maintain t
 - **Invariants of the supertype must be preserved in a subtype:** An invariant is something that never changes, like the ebb and flow of the tides. In the context of inheritance, we want to make sure that any invariants that are expected to be maintained by the parent class should also be maintained by the children.
 
 - **The History Rule:** This is the hardest aspect of LSP to understand. In essence, the child class shouldn’t allow state changes that your parent disallowed. So, in our example program we have an immutable Document class. In other words, once it has been instantiated you can’t remove, add, or alter any of the attributes.
+
+### **Test Hygiene**:
+
+- **Use domain terminology:** Align the vocabulary used in your test names with that used when describing the problem domain or referred by the application itself.
+
+- **Use natural language:** Every test name should be something that you can easily read as a sentence. It should always describe some behavior in a readable way.
+
+- **Be descriptive:** Code will be read many times more often than it is written. Don’t skimp on spending more time thinking of a good name that’s descriptive up front and easier to understand later down the line.
