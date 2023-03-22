@@ -13,7 +13,7 @@ import static org.junit.Assert.assertThat;
 
 // tag::eg_constants[]
 public class DocumentManagementSystemTest {
-    private static final String RESOURCES = "\\Users\\kream\\iCloudDrive\\Dev\\Edu\\Java\\java-oreilly-rwsd\\chapter_04\\src\\main\\resources\\";
+    private static final String RESOURCES = "\\src\\main\\resources\\";
     private static final String LETTER = RESOURCES + "patient.letter";
     private static final String REPORT = RESOURCES + "patient.report";
     private static final String XRAY = RESOURCES + "xray.jpg";
